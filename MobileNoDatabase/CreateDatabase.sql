@@ -4,7 +4,7 @@ CREATE DATABASE MobileNoDatabase; --select then execute
 --then run this query to create the table 
 USE MobileNoDatabase;
 CREATE TABLE person_number (
-    id int PRIMARY KEY,
+    id int IDENTITY(1,1) PRIMARY KEY,
     name varchar(50),
     mobile_no varchar(50)
 );
