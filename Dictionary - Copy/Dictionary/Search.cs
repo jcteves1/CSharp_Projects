@@ -135,6 +135,9 @@ namespace Dictionary
                         tbResult.DeselectAll();
                     }
                     tbResult.AppendText($"      {date}\r\n\r\n{definition}\r\n\r\n\r\n");
+                    tbResult.Select(word.Length, tbResult.Text.Length - word.Length);
+                    tbResult.SelectionBackColor = tbResult.BackColor;
+                    tbResult.DeselectAll();
                 }
             }
             catch (SqlException ex)
